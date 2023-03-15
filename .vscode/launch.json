@@ -1,0 +1,46 @@
+{
+	"version": "0.2.0",
+	"configurations":
+	[
+		{
+			"name": "(gdb) ben",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/ben/dist/debug/ben.out",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands":
+			[
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) gui",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/gui/dist/debug/gui.out",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands":
+			[
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
+}

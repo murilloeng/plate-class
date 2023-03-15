@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>846</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Plate</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0">
+     <widget class="QGroupBox" name="group_draw">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Draw</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="edit_mesh_1"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_terms">
+         <property name="text">
+          <string>Terms:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="edit_terms"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_mesh">
+         <property name="text">
+          <string>Mesh:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="combo_draw"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_draw">
+         <property name="text">
+          <string>Type:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLineEdit" name="edit_mesh_2"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QGroupBox" name="group_load">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Load</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_position">
+         <property name="text">
+          <string>Position:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_type">
+         <property name="text">
+          <string>Type:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLineEdit" name="edit_position_2"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLineEdit" name="edit_position_1"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="combo_type">
+         <item>
+          <property name="text">
+           <string>Point</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Line H</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Line V</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Patch</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_size">
+         <property name="text">
+          <string>Size:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="edit_size_1"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="edit_size_2"/>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_value">
+         <property name="text">
+          <string>Value:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLineEdit" name="edit_value"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="6">
+     <widget class="QOpenGLWidget" name="canvas"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="group_geometry">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Geometry</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_height">
+         <property name="text">
+          <string>Height:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_thickness">
+         <property name="text">
+          <string>Thickness:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_width">
+         <property name="text">
+          <string>Width:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="edit_width"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="edit_height"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="edit_thickness"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="group_material">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Material</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_poisson">
+         <property name="text">
+          <string>Poisson ratio:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_elastic">
+         <property name="text">
+          <string>Elastic modulus:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLineEdit" name="edit_elastic"/>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QLineEdit" name="edit_poisson"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="status_bar"/>
+ </widget>
+ <tabstops>
+  <tabstop>edit_width</tabstop>
+  <tabstop>edit_height</tabstop>
+  <tabstop>edit_thickness</tabstop>
+  <tabstop>edit_elastic</tabstop>
+  <tabstop>edit_poisson</tabstop>
+  <tabstop>combo_type</tabstop>
+  <tabstop>edit_size_1</tabstop>
+  <tabstop>edit_size_2</tabstop>
+  <tabstop>edit_position_2</tabstop>
+  <tabstop>edit_position_1</tabstop>
+  <tabstop>edit_value</tabstop>
+  <tabstop>combo_draw</tabstop>
+  <tabstop>edit_terms</tabstop>
+  <tabstop>edit_mesh_1</tabstop>
+  <tabstop>edit_mesh_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

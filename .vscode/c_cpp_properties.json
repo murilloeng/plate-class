@@ -1,0 +1,41 @@
+{
+	"configurations": 
+	[
+		{
+			"name": "Linux",
+			"includePath": 
+			[
+				"${workspaceFolder}/mat/inc",
+				"${workspaceFolder}/fea/inc",
+				"${workspaceFolder}/ben/inc",
+				"${workspaceFolder}/gui/inc",
+				"${workspaceFolder}/gui/build/unix",
+				"/usr/include/x86_64-linux-gnu/qt5/**"
+			],
+			"defines": [],
+			"cStandard": "gnu17",
+			"cppStandard": "gnu++17",
+			"intelliSenseMode": "gcc-x64",
+			"compilerPath": "/usr/bin/gcc"
+		},
+		{
+			"name": "Win32",
+			"includePath":
+			[
+				"${workspaceFolder}/inc",
+				"${workspaceFolder}/build/windows",
+				"C:/Qt/6.4.2/msvc2019_64/include/**",
+				"${workspaceFolder}/../external/cpp/inc"
+			],
+			"defines":
+			[
+				"NOMINMAX",
+				"_USE_MATH_DEFINES"
+			],
+			"cStandard": "c17",
+			"cppStandard": "c++17",
+			"intelliSenseMode": "windows-msvc-x64"
+		}
+	],
+	"version": 4
+}
