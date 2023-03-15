@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>846</height>
+    <height>876</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,21 @@
        <string>Draw</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_mesh">
+         <property name="text">
+          <string>Mesh:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="edit_terms"/>
+       </item>
        <item row="5" column="0">
         <widget class="QLineEdit" name="edit_mesh_1"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLineEdit" name="edit_mesh_2"/>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_terms">
@@ -37,19 +50,6 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QLineEdit" name="edit_terms"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_mesh">
-         <property name="text">
-          <string>Mesh:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QComboBox" name="combo_draw"/>
-       </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_draw">
          <property name="text">
@@ -57,8 +57,15 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
-        <widget class="QLineEdit" name="edit_mesh_2"/>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="combo_draw"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="push_draw">
+         <property name="text">
+          <string>Draw</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -146,7 +153,7 @@
      </widget>
     </item>
     <item row="0" column="1" rowspan="6">
-     <widget class="QOpenGLWidget" name="canvas"/>
+     <widget class="Canvas" name="canvas"/>
     </item>
     <item row="0" column="0">
      <widget class="QGroupBox" name="group_geometry">
@@ -232,6 +239,13 @@
   </widget>
   <widget class="QStatusBar" name="status_bar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QOpenGLWidget</extends>
+   <header>Canvas.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>edit_width</tabstop>
   <tabstop>edit_height</tabstop>

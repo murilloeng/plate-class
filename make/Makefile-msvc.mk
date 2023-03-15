@@ -6,7 +6,7 @@ LIBS += opengl32.lib glu32.lib
 QLIB = C:\Qt\6.4.2\msvc2019_64\lib
 QINC = C:\Qt\6.4.2\msvc2019_64\include
 DEFS += /D "NOMINMAX" /D "_USE_MATH_DEFINES"
-INCS += /I inc /I build/windows /I ..\..\external\cpp\inc
+INCS += /I inc /I build/windows /I ..\external\cpp\inc
 DEFS += -D QT_CORE_LIB -D QT_GUI_LIB -D QT_WIDGETS_LIB -D QT_SHARED -D QT_OPENGL_LIB -D QT_CONSOLE -D QT_PRINTSUPPORT_LIB
 INCS += /I $(QINC) /I $(QINC)\QtCore /I $(QINC)\QtGui /I $(QINC)\QtWidgets /I $(QINC)\QtOpenGL /I $(QINC)\QtOpenGLWidgets
 CXXFLAGS = /nologo /std:c++20 /Zc:__cplusplus /EHsc /c /openmp /diagnostics:caret $(DEFS) $(INCS) $(WARS)
@@ -18,6 +18,8 @@ LIBS +=\
 	$(QLIB)/Qt6Widgets.lib\
 	$(QLIB)/Qt6PrintSupport.lib\
 	$(QLIB)/Qt6OpenGLWidgets.lib
+
+DLLS =
 
 #mode
 ifneq ($(m), r)
@@ -68,7 +70,7 @@ debug :
 setup :
 	@if not exist dist\windows\$(mode) mkdir dist\windows\$(mode)
 
-$(out) : setup $(uig) $(mog) $(obj)
+$(out) : setup $(uig) $(mog) $(obj) $(DLLS)
 	@echo executable($(mode)): $@
 	@link /nologo $(LNKS) /out:$(out) $(obj) $(LIBS)
 
@@ -88,7 +90,7 @@ build/windows/$(mode)/obj/%.o : src/%.cpp build/windows/$(mode)/obj/%.d
 	@echo compiling($(mode)): $<
 	@if exist $(subst /,\,$@) del $(subst /,\,$@)
 	@if not exist $(subst /,\,$(dir $@)) mkdir $(subst /,\,$(dir $@))
-	@$(CXX) $(CXXFLAGS) /Fo:$@ $< > nul
+	@$(CXX) $(CXXFLAGS) /Fo:$@ $<
 	@python msvc-dep.py $< $@
 
 build/windows/$(mode)/moc/%.o : build/windows/moc/%.cpp build/windows/$(mode)/moc/%.d
@@ -97,6 +99,10 @@ build/windows/$(mode)/moc/%.o : build/windows/moc/%.cpp build/windows/$(mode)/mo
 	@if not exist $(subst /,\,$(dir $@)) mkdir $(subst /,\,$(dir $@))
 	@$(CXX) $(CXXFLAGS) /Fo:$@ $< > nul
 	@python msvc-dep.py $< $@
+
+dist/windows/$(mode)/%.dll : ../external/cpp/dll/x64/%.dll
+	@if not exist $(subst /,\,$(dir $@)) mkdir $(subst /,\,$(dir $@))
+	@copy /y $(subst /,\,$<) $(subst /,\,$@) > nul
 
 $(dep) : ;
 

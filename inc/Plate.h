@@ -11,12 +11,9 @@ enum class load_type : unsigned
 
 enum class draw_type : unsigned
 {
-	U3,
-	R1,
-	R2,
-	M11,
-	M12,
-	M22,
+	model, 
+	U3, R1, R2,
+	M11, M12, M22,
 	last
 };
 
@@ -35,6 +32,10 @@ public:
 	virtual const char* load_name(void) const;
 	virtual const char* draw_name(void) const;
 
+	//solution
+	void setup(void);
+	double solution(unsigned, const double*) const;
+
 	//data
 	double m_width;
 	double m_height;
@@ -51,4 +52,6 @@ public:
 	draw_type m_draw_type;
 	unsigned m_draw_terms;
 	unsigned m_draw_mesh[2];
+
+	double *m_q, *m_u3, *m_t1, *m_t2;
 };
