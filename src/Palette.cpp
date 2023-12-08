@@ -1,5 +1,5 @@
 //project
-#include "Palette.h"
+#include "inc/Palette.hpp"
 
 //constructor
 Palette::Palette(void) : m_min(0), m_max(1)

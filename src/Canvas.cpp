@@ -1,10 +1,7 @@
-//qt
-#include <QOpenGLFunctions>
-
 //project
-#include "Plate.h"
-#include "Canvas.h"
-#include "Palette.h"
+#include "inc/Plate.hpp"
+#include "inc/Canvas.hpp"
+#include "inc/Palette.hpp"
 
 //constructor
 Canvas::Canvas(QWidget* parent) : QOpenGLWidget(parent), 
@@ -94,12 +91,12 @@ void Canvas::initializeGL(void)
 	//glew
 	initializeOpenGLFunctions();
 	//program
-	if(!m_program.addShaderFromSourceFile(QOpenGLShader::Vertex, "shaders/vs.glsl"))
+	if(!m_program.addShaderFromSourceFile(QOpenGLShader::Vertex, "shaders/plate.vert"))
 	{
 		printf("%s\n", m_program.log().toUtf8().data());
 		exit(EXIT_FAILURE);
 	}
-	if(!m_program.addShaderFromSourceFile(QOpenGLShader::Fragment, "shaders/fs.glsl"))
+	if(!m_program.addShaderFromSourceFile(QOpenGLShader::Fragment, "shaders/plate.frag"))
 	{
 		printf("%s\n", m_program.log().toUtf8().data());
 		exit(EXIT_FAILURE);

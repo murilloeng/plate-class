@@ -1,8 +1,8 @@
 //ext
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 //plate
-#include "Window.h"
+#include "inc/Window.hpp"
 
 int main(int argc, char *argv[])
 {

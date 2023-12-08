@@ -1,14 +1,12 @@
 *
 !*/
-!*.h
 !*.ui
-!*.py
 !*.md
-!*.mk
-!*.sh
-!*.dat
+!*.bat
 !*.cpp
-!*.glsl
+!*.hpp
+!*.vert
+!*.frag
 !*.json
 
 **/uic/*

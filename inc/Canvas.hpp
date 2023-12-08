@@ -1,10 +1,10 @@
 #pragma once
 
 //qt
-#include <QOpenGLWidget>
-#include <QOpenGLBuffer>
-#include <QOpenGLFunctions>
-#include <QOpenGLShaderProgram>
+#include <QtGui/QOpenGLFunctions>
+#include <QtOpenGL/QOpenGLBuffer>
+#include <QtOpenGL/QOpenGLShaderProgram>
+#include <QtOpenGLWidgets/QOpenGLWidget>
 
 class Plate;
 class Palette;

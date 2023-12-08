@@ -1,6 +1,8 @@
 {
     "files.associations": {
+        "*.dat": "plaintext",
         "qmainwindow": "cpp",
-        "qopenglwidget": "cpp"
+        "qopenglwidget": "cpp",
+        "qopenglfunctions_4_5_core": "cpp"
     }
 }

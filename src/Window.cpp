@@ -1,12 +1,12 @@
 //qt
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 //plate
-#include "Plate.h"
-#include "Window.h"
+#include "inc/Plate.hpp"
+#include "inc/Window.hpp"
 
 //ui
-#include "uic/Window.h"
+#include "build/uic/Window.hpp"
 
 //constructors
 Window::Window(void) : m_plate(new Plate), m_ui(new Ui::Window)

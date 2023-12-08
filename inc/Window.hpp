@@ -1,7 +1,7 @@
 #pragma once
 
 //qt
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 class Plate;
 namespace Ui

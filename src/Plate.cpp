@@ -2,7 +2,7 @@
 #include <cmath>
 
 //project
-#include "Plate.h"
+#include "inc/Plate.hpp"
 
 //constructor
 Plate::Plate(void) : 
